@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
     <script src="scripts/getdates.js" defer></script>
-    <script src="scripts/getnews.js" defer></script>
+    <!-- <script src="scripts/getnews.js" defer></script> -->
+    <script src="scripts/getnews-example.js" defer></script>
 </head>
 <body>
     <header>
@@ -25,8 +26,8 @@
     </header>
     <main>
         <div id="main-div">
-        <h1><i>Steven Foster</i></h1>
-            <section class="card">
+            <h1><i>Steven Foster</i></h1>
+            <section class="card" id="story">
                 <h2>My Story</h2>
                 <p>
                     Hello!
@@ -41,7 +42,7 @@
                     I've studied software development for a couple of years, forgetting 
                     about as fast as I learn.  My interests also include:
                 </p>
-                <span>
+                <div>
                     <img id="top-card-img" src="images/backyard-sm.jpg" alt="Close to where we live" height="150">
                     <ul id="img-list">
                         <li>politics,</li>
@@ -52,21 +53,21 @@
                         <li>genealogy,</li>
                         <li>keeping track of my thousands of photographs,</li>
                     </ul>
-                </span>
+                </div>
                 <br>
                 <p>...and a long list of other things.  It's nice to meet you!</p>
             </section>
-            <section class="card">
+            <section class="card" id="news">
                 <h2>Local News</h2>
                 <section class="news-card">
-                    <div class="news-container">
+                    <div class="news-container" id="news-container1">
                         <img src="images/flag-sm4.jpg" alt="An image" class="news-image" width="100" height="100">
                         <h3 class="news-title">Sample Headline</h3>
                         <p class="news-excerpt">Sample Story</p>
                     </div>
                 </section>
                 <section class="news-card">
-                    <div class="news-container">
+                    <div class="news-container" id="news-container2">
                         <img src="images/flag-sm4.jpg" alt="An image" class="news-image" width="100" height="100">
                         <h3 class="news-title">Sample Headline</h3>
                         <p class="news-excerpt">Sample Story</p>
