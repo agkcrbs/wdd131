@@ -98,8 +98,8 @@ a:hover {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     text-align: center;
     background-color: #FFFFFF;
     width: 95vw;
