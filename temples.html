@@ -9,18 +9,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
     <link href="styles/temples.css" rel="stylesheet">
     <link href="styles/temples-large.css" rel="stylesheet">
+    <script src="scripts/temples.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
     <header>
-        <p>Temple Album</p>
+        <h1>Temple Album</h1>
+        <a id="menuButton" href="#"></a>
         <nav>
-        <a href="">Home</a>
-        <a href="">Old</a>
-        <a href="">New</a>
-        <a href="">Large</a>
-        <a href="">Small</a>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Old</a></li>
+                <li><a href="">New</a></li>
+                <li><a href="">Large</a></li>
+                <li><a href="">Small</a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -36,6 +42,11 @@
         <figure></figure>
     </main>
     <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Steven Foster <img src="images/flag-sm4.jpg" alt="Korean flag" height="15"> Republic of (South) Korea
+        </p>
+        <p id="lastModified">This webpage was last modified on: </p>
     </footer>
 </body>
 </html>
