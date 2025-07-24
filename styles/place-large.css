@@ -20,7 +20,7 @@
 
     .card {
         position: absolute;
-        font-size: 0.7rem;
+        font-size: 0.85rem;
     }
 
     #data {
@@ -30,7 +30,7 @@
     }
 
     #weather {
-        bottom: calc(18rem - 20vw);;
+        bottom: calc(36rem - 40vw);;
         right: 0.25rem;
         width: 35%;
     }

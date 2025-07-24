@@ -28,7 +28,7 @@ header {
     align-self: center;
     align-items: center;
     background-color: white;
-    font-size: x-large;
+    font-size: xx-large;
     line-height: 1.2;
     border-radius: 20px;
 }
@@ -83,10 +83,6 @@ main {
     transition: background-color 0.7s;
 }
 
-h2 {
-    border-radius: 15px;
-}
-
 .content-table {
     background-color: white;
     width: 100%;
@@ -100,11 +96,13 @@ h2 {
     border-radius: 10px;
 }
 
-h2 {
+.header-element {
     background-color: white;
     margin: 0.5rem;
     width: 75%;
     justify-self: center;
+    border-radius: 15px;
+    font-size: x-large;
 }
 
 .table-label {
@@ -119,7 +117,7 @@ h2 {
 footer {
     background-color: var(--red);
     text-align: center;
-    font-size: x-small;
+    font-size: small;
     padding: 0.25rem 0;
     position: fixed;
     bottom: 0;
