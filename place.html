@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WDD 131 – Dynamic Web Fundamentals – Place Assignment - Steven Foster</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Steven Foster - A sample website for BYU-Idaho's WDD 131 web design class">
+    <meta name="author" content="Steven Foster">
+    <link href="styles/place.css" rel="stylesheet">
+    <link href="styles/place-large.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 id="course-title">South Korea</h1>
+    </header>
+    <main>
+        <picture>
+            <source srcset="images/galbi-md.webp" media="(min-width: 500px)">
+            <img id="hero" src="images/galbi-sm.webp" alt="a Korean restaurant" height="300" width="300">
+        </picture>
+        <div id="data" class="card">
+            <table class="content-table">
+                <tr>
+                    <th colspan="3" class="table-header"><h2>Data</h2></th>
+                </tr>
+                <tr>
+                    <td class="table-label">Label</td>
+                    <td class="table-colon">: </td>
+                    <td class="table-value">Value</td>
+                </tr>
+                <tr>
+                    <td class="table-label">Label</td>
+                    <td class="table-colon">: </td>
+                    <td class="table-value">Value</td>
+                </tr>
+                <tr>
+                    <td class="table-label">Label</td>
+                    <td class="table-colon">: </td>
+                    <td class="table-value">Value</td>
+                </tr>
+                <tr>
+                    <td class="table-label">Label</td>
+                    <td class="table-colon">: </td>
+                    <td class="table-value">Value</td>
+                </tr>
+                <tr>
+                    <td class="table-label">Label</td>
+                    <td class="table-colon">: </td>
+                    <td class="table-value">Value</td>
+                </tr>
+                <tr>
+                    <td class="table-label">Label</td>
+                    <td class="table-colon">: </td>
+                    <td class="table-value">Value</td>
+                </tr>
+                <tr>
+                    <td class="table-label">LabelLabelLabelLabel</td>
+                    <td class="table-colon">: </td>
+                    <td class="table-value">ValueValueValueValue</td>
+                </tr>
+                <tr>
+                    <td class="table-label">Label</td>
+                    <td class="table-colon">: </td>
+                    <td class="table-value">Value</td>
+                </tr>
+            </table>
+        </div>
+        <div id="weather" class="card">
+            <table class="content-table">
+                <tr>
+                    <th colspan="3" class="table-header"><h2 id="weather-heading">Weather</h2></th>
+                </tr>
+                <tr id="weather-row">
+                    <th colspan="3"><img src="images/weather.svg" alt="a picture of weather" height="50" width="50"></th>
+                </tr>
+                <tr>
+                    <td class="table-label">Label</td>
+                    <td class="table-colon">: </td>
+                    <td class="table-value">Value</td>
+                </tr>
+                <tr>
+                    <td class="table-label">Label</td>
+                    <td class="table-colon">: </td>
+                    <td class="table-value">Value</td>
+                </tr>
+                <tr>
+                    <td class="table-label">Label</td>
+                    <td class="table-colon">: </td>
+                    <td class="table-value">Value</td>
+                </tr>
+                <tr>
+                    <td class="table-label">LabelLabelLabel</td>
+                    <td class="table-colon">: </td>
+                    <td class="table-value">ValueValueValue</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Steven Foster <img src="images/flag-sm4.jpg" alt="Korean flag" height="15"> Republic of (South) Korea
+        </p>
+        <p id="lastModified">This webpage was last modified on: </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,63 @@
+@media only screen and (min-width: 500px) {
+    header {
+        width: 100%;
+    }
+
+    #course-title {
+        width: 300px;
+    }
+
+    main {
+        padding-bottom: 0;
+    }
+
+    #hero {
+        height: auto;
+        width: 100%;
+        margin: 0;
+
+    }
+
+    .card {
+        position: absolute;
+        font-size: 0.7rem;
+    }
+
+    #data {
+        top: 4.5rem;
+        left: 1rem;
+        width: 35%;
+    }
+
+    #weather {
+        bottom: calc(18rem - 20vw);;
+        right: 0.25rem;
+        width: 35%;
+    }
+
+    .table-header {
+        transform: translateX(-10px)
+                    translateY(-5px);
+    }
+
+    #weather-heading::after {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-image: url("../images/weather.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: 5px;
+    }
+
+    #weather-row {
+        display: none;
+    }
+
+    footer {
+        position: relative;
+        width: 100%;
+        display: block;
+    }
+}
