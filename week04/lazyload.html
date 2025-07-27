@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Progressive Loading</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Steven Foster - Progressive Loading Practice Page">
+    <meta name="author" content="Steven Foster">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../scripts/getdates.js" defer></script>
+    <style>main {margin-bottom: 120px;}
+        main img {display: block; justify-self: center; padding: 1rem; opacity: 0; animation: fadeIn 10s forwards;}
+        @keyframes fadeIn {to {opacity: 1;}}
+        footer {max-height: 200px; text-align: center; background-color: #A2DAFF; color: #000000; padding: 1rem; position: fixed; bottom: 0; width: 100%;}</style>
+</head>
+<body>
+    <main>
+        <h1 style="justify-self: center;">Lazy Loading</h1>
+        <img src="../images/loading/1.jpg" width="400" height="513" loading="lazy">
+        <img src="../images/loading/2-not.jpg" width="400" height="513" loading="lazy">
+        <img src="../images/loading/3.jpg" width="400" height="513" loading="lazy">
+        <img src="../images/loading/4.jpg" width="400" height="513" loading="lazy">
+        <img src="../images/loading/5.jpg" width="400" height="513" loading="lazy">
+        <img src="../images/loading/6.jpg" width="400" height="513" loading="lazy">
+        <img src="../images/loading/7-not.jpg" width="400" height="513" loading="lazy">
+        <img src="../images/loading/8.jpg" width="400" height="513" loading="lazy">
+        <img src="../images/loading/9.jpg" width="400" height="513" loading="lazy">
+        <img src="../images/loading/10.jpg" width="400" height="513" loading="lazy">
+    </main>
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Steven Foster <img src="../images/flag-sm4.jpg" alt="Korean flag" height="15"> Republic of (South) Korea
+        </p>
+        <p id="lastModified">This webpage was last modified on: </p>
+    </footer>
+</body>
+</html>
