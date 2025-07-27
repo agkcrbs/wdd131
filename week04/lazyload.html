@@ -11,13 +11,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="../scripts/getdates.js" defer></script>
     <style>main {margin-bottom: 120px;}
-        main img {display: block; justify-self: center; padding: 1rem; opacity: 0; animation: fadeIn 10s forwards;}
-        @keyframes fadeIn {to {opacity: 1;}}
+        /* main img {display: block; justify-self: center; padding: 1rem; opacity: 0; animation: fadeIn 10s forwards;} */
+        main img {display: block; justify-self: center; padding: 1rem; opacity: 0; transition: opacity 10s ease-in;}
+        main img.loaded {opacity: 1;}
+        /* @keyframes fadeIn {to {opacity: 1;}} */
         footer {max-height: 200px; text-align: center; background-color: #A2DAFF; color: #000000; padding: 1rem; position: fixed; bottom: 0; width: 100%;}</style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll("img[loading='lazy']");
+            images.forEach(img => {
+                img.addEventListener("load", () => {
+                    img.classList.add("loaded");
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <main>
         <h1 style="justify-self: center;">Lazy Loading</h1>
+        <p>Scroll down...</p>
+        <div style="height: 2000px; background: lightgray;"></div>
+        <div style="height: 2000px; background: lightgray;"></div>
         <img src="../images/loading/1.jpg" width="400" height="513" loading="lazy">
         <img src="../images/loading/2-not.jpg" width="400" height="513" loading="lazy">
         <img src="../images/loading/3.jpg" width="400" height="513" loading="lazy">
