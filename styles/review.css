@@ -1,0 +1,32 @@
+body {
+    font-family: "Outfit", sans-serif;
+    background-color: #A2DAFF;
+    color: #292929;
+    padding: 2rem;
+    text-align: center;
+}
+
+#message-holder {
+    background-color: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #006EB6;
+}
+
+.count {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+a {
+    display: inline-block;
+    margin-top: 2rem;
+    color: #006EB6;
+    font-weight: bold;
+}

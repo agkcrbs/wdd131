@@ -1,0 +1,64 @@
+
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Review</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Steven Foster - A product review form">
+    <meta name="author" content="Steven Foster">
+    <link href="styles/form.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <form method="get" action="review.html">
+        <label for="product">Product Name</label>
+        <select id="product" name="product" required>
+            <option value="" disabled selected>Select a Product</option>
+        </select>
+
+        <label>Overall Rating</label>
+        <div class="rating-stars">
+            <label for="star1"><input type="radio" id="star1" name="stars" value="1star" required><br>&star;</label>
+            <label for="star2"><input type="radio" id="star2" name="stars" value="2star" required><br>☆☆</label>
+            <label for="star3"><input type="radio" id="star3" name="stars" value="3star" required><br>☆☆☆</label>
+            <label for="star4"><input type="radio" id="star4" name="stars" value="4star" required><br>☆☆☆☆</label>
+            <label for="star5"><input type="radio" id="star5" name="stars" value="5star" required><br>☆☆☆☆☆</label>
+        </div>
+
+        <label for="date">Date of Installation</label>
+        <input type="date" id="date" name="installationDate" required>
+
+        <label>Which features did you find useful in the product? <span class="optional">(Check all that apply)</span></label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" id="durability" name="features" value="Durability"> Durability</label>
+            <label><input type="checkbox" id="ease" name="features" value="Ease of Use"> Ease of Use</label>
+            <label><input type="checkbox" id="performance" name="features" value="Performance"> Performance</label>
+            <label><input type="checkbox" id="design" name="features" value="Design"> Design</label>
+        </div>
+
+        <label for="review">Written Review <span class="optional">(Optional)</span></label>
+        <textarea id="review" name="review" rows="4"></textarea>
+
+        <label for="username">Your Name <span class="optional">(Optional)</span></label>
+        <input type="text" id="username" name="username">
+
+        <input type="submit" value="Post Review">
+    </form>
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Steven Foster <img src="images/flag-sm4.jpg" alt="Korean flag" height="15"> Republic of (South) Korea
+        </p>
+        <p id="lastModified">This webpage was last modified on: </p>
+    </footer>
+</body>
+</html>
