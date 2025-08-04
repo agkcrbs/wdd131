@@ -1,0 +1,36 @@
+body {
+    font-family: "Outfit", Trebuchet, sans-serif;
+    background-color: #A2DAFF;
+    color: #292929;
+    margin: 2rem;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #006EB6;
+}
+
+h2 {
+    color: #006EB6;
+}
+
+section {
+    background: white;
+    padding: 1rem 2rem;
+    margin: 2rem 0;
+    border-radius: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.wireframe {
+    background-color: #e6f4ff;
+    padding: 1rem;
+    border: 1px dashed #006EB6;
+    text-align: center;
+    font-style: italic;
+}
+
+#special-font {
+    font-family: "Dancing Script", sans-serif;
+}
