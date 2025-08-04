@@ -1,0 +1,133 @@
+body {
+    font-family: "Dancing Script", sans-serif;
+    background-color: #006EB6;
+    min-width: 430px;
+    margin: 0;
+}
+
+header {
+    font-size: large;
+    background-color: #A2DAFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 440px;
+    border-radius: 5px;
+}
+
+header h1 {
+    width: 40%;
+    text-align: center;
+    
+}
+
+#menuButton {
+    font-family: 'Times New Roman';
+    border: 1px solid black;
+    margin-top: -1rem;
+    margin-bottom: 0.5rem;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+#menuButton::after {
+	content: " ⤓";
+    font-size: x-large;
+}
+
+#menuButton.showNavHideButton::after {
+	content: " ⤒";
+    font-size: x-large;
+}
+
+nav {
+    font-family: 'Times New Roman';
+    font-size: large;
+    width: 50%;
+    display: none;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+nav.showNavHideButton {
+    display: flex;
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    padding-left: 0;
+    flex-direction: column;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+    height: 3rem;
+    align-content: center;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+}
+
+nav ul li a {
+    display: block;
+    height: 100%;
+    align-content: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    transition: 0.1s;
+    color: black;
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateX(2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid black;
+}
+
+#menuButton:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    background-color: #FFFFFF;
+    width: 95vw;
+    margin: 0.5rem auto 0.5rem auto;
+    padding-bottom: 1rem;
+}
+
+main section {
+    gap: 1rem;
+    justify-content: center;
+}
+
+#temple-card {
+    justify-self: center;
+}
+
+h2 {
+    padding: 1rem;
+    font-size-adjust: calc(0.4);
+    text-decoration-line: underline;
+}
+
+footer {
+    font-family: "Outfit", sans-serif;
+    background-color: #A2DAFF;
+    text-align: center;
+    align-content: center;
+    height: 90px;
+    border-radius: 5px;
+}
+
