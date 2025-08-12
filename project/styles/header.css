@@ -84,7 +84,7 @@ nav svg {
     margin-top: 170px;
 }
 
-@media only screen and (min-width: 600px) { /* 'only' is a legacy feature; 'screen' is also understood and omissible */
+@media only screen and (min-width: 768px) { /* 'only' is a legacy feature; 'screen' is also understood and omissible */
     header {
         border-radius: 5px;
     }

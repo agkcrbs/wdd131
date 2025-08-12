@@ -9,6 +9,7 @@
 
 body {
     font-family: "Outfit", Trebuchet, sans-serif;
+    min-width: 410px;
 }
 
 /* */
@@ -39,8 +40,8 @@ body {
 }
 
 #news-container {
-    width: 58%;
-    margin: 20px 10px;
+    width: 70%;
+    margin: 20px 0;
     justify-self: right;
     position: relative;
     bottom: 260px;
@@ -49,7 +50,7 @@ body {
 
 #right-news-floater {
     float: right;
-    margin-right: 8%;
+    margin-right: 5%;
 }
 .news-item {
     background-color: rgba(240, 240, 240, 0.5);
@@ -84,7 +85,7 @@ body {
 #card-container {
     display: flex;
     flex-direction: column;
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     border: 1px solid black;
@@ -101,7 +102,12 @@ body {
     padding: 10px;
 }
 
-.card-img-box, .card-word-box {
+.card-img-box {
+    width: 50%;
+    margin-right: 30px;
+}
+
+.card-word-box {
     width: 50%;
 }
 
@@ -139,7 +145,7 @@ main {
     background-color: silver;
 }
 
-@media only screen and (min-width: 600px) { /* 'only' is a legacy feature; 'screen' is also understood and omissible */
+@media only screen and (min-width: 768px) { /* 'only' is a legacy feature; 'screen' is also understood and omissible */
 
 }
 
