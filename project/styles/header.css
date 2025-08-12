@@ -1,0 +1,146 @@
+header {
+    background-color: white;
+    color: white;
+    text-align: center;
+    margin: 5px;
+}
+
+h1 {
+    background-color: var(--bg);
+    align-content: center;
+    height: 75px;
+    border-radius: 5px;
+}
+
+nav {
+    height: 60px;
+}
+
+#down-svg {
+    display: block;
+    height: 60px;
+    transition: background-color 1.0s ease; /* if this is in the hover selector, it won't ease back out */
+    background-color: #292929;
+    border-radius: 5px;
+}
+
+#down-svg:hover, #up-svg:hover {
+    background-color: #000000;
+}
+
+#down-svg:hover > svg, #up-svg:hover > svg { /* child combinator */
+    fill: #43a6e7;
+}
+
+nav svg {
+    fill: #006EB6;
+    transition: fill 1.0s ease;
+}
+
+#stacked-menu {
+    display: none;
+    height: 165px;
+}
+
+#h3-1, #h3-2, #h3-3 {
+    height: 55px;
+    background-color: #292929;
+    transition: background-color 1.0s ease;
+    align-content: center;
+    border-radius: 5px;
+}
+
+#h3-1:hover, #h3-2:hover, #h3-3:hover {
+    background-color: purple; /* #494949; */
+}
+
+#up-svg {
+    display: none;
+    height: 60px;
+    background-color: #292929;
+    transition: background-color 1.0s ease;
+    border-radius: 5px;
+}
+
+#down-svg.show {
+    display: none;
+}
+
+#stacked-menu.show {
+    display: block;
+}
+
+#up-svg.show {
+    display: block;
+}
+
+/* */
+
+/* main.show {
+    margin-top: 165px;
+} */
+
+#main-expander.show {
+    margin-top: 170px;
+}
+
+@media only screen and (min-width: 600px) { /* 'only' is a legacy feature; 'screen' is also understood and omissible */
+    header {
+        border-radius: 5px;
+    }
+
+    #down-svg, #up-svg {
+        display: none;
+    }
+
+    #stacked-menu {
+        height: 60px;
+        display: flex;
+    }
+
+    #stacked-menu.show {
+        display: flex;
+    }
+
+    #up-svg.show {
+        display: none;
+    }
+
+    #main-expander.show {
+        margin-top: 0px;
+    }
+
+    header {
+        display: flex;
+        background-color: var(--bg);
+    }
+
+    h1 {
+        width: 40%;
+    }
+
+    /* * * {
+        border: 1px solid black;
+    } */
+
+    nav {
+        background-color: purple;
+        align-self: center;
+        flex-basis: 60%;
+        padding: 3px;
+        border-radius: 10px;
+    }
+
+    #stacked-menu {
+        gap: 20px;
+    }
+
+    #stacked-menu h3 {
+        width: 100%;
+        border-radius: 30px;
+    }
+
+    #h3-1:hover, #h3-2:hover, #h3-3:hover {
+        background-color: #000000;
+    }
+}

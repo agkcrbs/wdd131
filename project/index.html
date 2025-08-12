@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Family Website</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Steven Foster - My Family Site">
+    <meta name="author" content="Steven Foster">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <link href="styles/project.css" rel="stylesheet">
+    <link href="styles/header.css" rel="stylesheet">
+    <script src="scripts/project.js" defer></script>
+    <script src="scripts/hover.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Our Family</h1>
+        <nav>
+            <div id="down-svg">
+                <svg width="60" height="60" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Draw a circle with background color and white border -->
+                <circle cx="100" cy="100" r="75" stroke="#FFFFFF" stroke-width="5" />
+                <!-- Draw a downward-pointing flattish triangle -->
+                <polygon points="100,145 40,85 160,85" fill="white" />
+                </svg>
+            </div>
+            <div id="stacked-menu">
+                <h3 id="h3-1">Parents</h3>
+                <h3 id="h3-2">Children</h3>
+                <h3 id="h3-3">Contact</h3>
+            </div>
+            <div id="up-svg">
+                <svg width="60" height="60" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="75" stroke="#FFFFFF" stroke-width="5" />
+                <!-- Draw an upward-pointing flattish triangle -->
+                <polygon points="100,65 40,125 160,125" fill="white" />
+                </svg>
+            </div>
+        </nav>
+    </header>
+
+
+
+<main>
+    <div id="main-expander"></div>
+
+    <div id="hero-image">
+        <div id="news">
+            <div id="news-label">Family News!</div>
+        </div>
+    
+    
+        <div id="news-container">
+            <!-- Visible News (with transparency) -->
+            <div id="right-news-floater">
+                <div class="news-item visible top-news">
+                    <div class="news-plate">
+                        <h4>August 10th:</h4>
+                        <p>We went to the beach!</p>
+                    </div>
+                </div>
+                <div class="news-item visible top-news">
+                    <div class="news-plate">
+                        <h4>July 26th to August 16th:</h4>
+                        <p>Grandfather is here to visit!</p>
+                    </div>
+                </div>
+                <div class="news-item visible top-news">
+                    <div class="news-plate">
+                        <h4>July:</h4>
+                        <p>Time for summer...</p>
+                    </div>
+                </div>
+                <div id="see-more">
+                    <h4>See more below ↴</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Cards Section (Responsive) -->
+    <div id="card-container">
+        <div class="card">
+            <div class="card-img-box">
+                <img src="images/children-small.jpg" alt="Children" height="190" width="110">
+            </div>
+            <div class="card-word-box">
+                <h3>Meet Our Children</h3>
+                <p>Like most good children,<br>they are high-energy.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img-box">
+                <img src="images/parents-small.jpg" alt="Children" height="160" width="200">
+            </div>
+            <div class="card-word-box">
+                <h3>Meet Our Parents</h3>
+                <p>They met purely<br>by accident.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img-box">
+                <svg width="120" height="60" viewBox="0 0 120 60" fill="#F0F0F0" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L60 40L120 0L0 0L0 60L120 60L120 0Z" stroke="black" stroke-width="3" fill="#FFFFFF"></path>
+                    <path d="M0 60L45 30M75 30L120 60Z" stroke="black" stroke-width="2" fill="FFFFFF"></path>
+                </svg>
+            </div>
+            <div class="card-word-box">
+                <h3>Send Us A Message</h3>
+                <p>We'll answer when we<br>get a spare minute.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden News -->
+    <div class="news-item hidden">Older News Item 3</div>
+    <div class="news-item hidden">Older News Item 4</div>
+    <div class="news-item hidden">Older News Item 5</div>
+    <div class="news-item hidden">Older News Item 6</div>
+    <div class="news-item hidden">Older News Item 7</div>
+    <div class="news-item hidden">Older News Item 8</div>
+    <div class="news-item hidden">Older News Item 9</div>
+
+
+</main>
+
+
+
+
+
+
+
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Steven Foster <img src="images/flag-sm4.jpg" alt="Korean flag" height="15"> Republic of (South) Korea
+        </p>
+        <p id="footer-space"></p>
+        <p id="lastModified">This webpage was last modified on: </p>
+    </footer>
+</body>
