@@ -1,0 +1,133 @@
+/* */
+
+#home-card-container, #child-card-container, #parent-card-container {
+    background-color: silver;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.home-card, .child-card, .parent-card {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+.home-card:hover {
+    background-color: rgba(241, 241, 241, 0.918);
+    cursor: pointer;
+}
+
+.home-card:hover * {
+    cursor: pointer;
+}
+
+.card-img-box {
+    width: 50%;
+    margin-right: 30px;
+}
+
+.card-img-box>img {
+    border-radius: 5px;
+}
+
+.card-word-box {
+    width: 50%;
+}
+
+.card-word-box>h3 {
+    margin-bottom: 10px;
+    font-family: "Dancing Script", sans-serif;
+    font-size: x-large;
+    text-decoration: underline;
+    padding: 5px 0;
+}
+
+#card-bottom {
+    width: 90%;
+    margin: 10px auto 15px;
+}
+
+/* Hovering effects */
+
+#card-top1:hover {
+    /* position: relative; */
+    transform-origin: center;
+    animation: shake 0.5s ease-in-out infinite; /* Start the animation */
+}
+
+#card-top2 {
+    /* position: relative; */
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out; /* Crucial for smooth transition */
+}
+
+#card-top2:hover {
+    animation-name: bump; /* Trigger the animation on hover */
+    animation-duration: 0.5s;
+}
+
+#card-bottom:hover {
+    /* position: relative; */
+    transform-origin: center;
+    animation: scootAndBounce 1s ease-in-out;
+    animation-fill-mode: forwards; /* Keeps final position */
+}
+
+.child-card {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+}
+
+.child-card li {
+    width: max-content;
+    justify-self: center;
+}
+
+.child-card-img-box>h3 {
+    font-size: x-large;
+    text-decoration: underline;
+    margin: 10px 0;
+}
+
+.child-card-word-box>p {
+    font-size: larger;
+    text-decoration: underline;
+    margin: 20px 0 10px 0;
+}
+
+.child-card-word-box>h4 {
+    margin: 20px 0 10px 0;
+    text-decoration: underline;
+}
+
+#parent-card-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.parent-card-img-box>* {
+    margin: 10px 0;
+}
+
+.parent-card-word-box {
+    justify-items: center;
+    width: 90%;
+    margin-left: 10px;
+}
+
+.parent-card-word-box>p {
+    text-align: left;
+    font-size: medium;
+    width: 195px;
+    margin: 10px 0;
+}

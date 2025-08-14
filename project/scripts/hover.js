@@ -6,42 +6,34 @@ let h3_3 = document.getElementById("h3-3");
 
 let listenersAttached = false;
 
+function highlight(number) {
+    if (number === "1") {
+        h3_2.style.backgroundColor = "purple";
+        h3_3.style.backgroundColor = "purple";
+    } else if (number === "2") {
+        h3_1.style.backgroundColor = "purple";
+        h3_3.style.backgroundColor = "purple";
+    } else {
+        h3_1.style.backgroundColor = "purple";
+        h3_2.style.backgroundColor = "purple";
+    }
+}
+
+function unhighlight(number) {
+    if (number === "1") {
+        h3_2.style.backgroundColor = "#292929";
+        h3_3.style.backgroundColor = "#292929";
+    } else if (number === "2") {
+        h3_1.style.backgroundColor = "#292929";
+        h3_3.style.backgroundColor = "#292929";
+    } else {
+        h3_1.style.backgroundColor = "#292929";
+        h3_2.style.backgroundColor = "#292929";
+    }
+}
+
 function attachListeners() {
-    if (listenersAttached) return; // Avoid duplicate attachments
-
-    // Remove any existing listeners first, crucial for re-attaching
-    h3_1.removeEventListener("mouseenter", highlight);
-    h3_1.removeEventListener("mouseleave", unhighlight);
-    h3_2.removeEventListener("mouseenter", highlight);
-    h3_2.removeEventListener("mouseleave", unhighlight);
-    h3_3.removeEventListener("mouseenter", highlight);
-    h3_3.removeEventListener("mouseleave", unhighlight);
-
-    function highlight(number) {
-        if (number === "1") {
-            h3_2.style.backgroundColor = "purple";
-            h3_3.style.backgroundColor = "purple";
-        } else if (number === "2") {
-            h3_1.style.backgroundColor = "purple";
-            h3_3.style.backgroundColor = "purple";
-        } else {
-            h3_1.style.backgroundColor = "purple";
-            h3_2.style.backgroundColor = "purple";
-        }
-    }
-
-    function unhighlight(number) {
-        if (number === "1") {
-            h3_2.style.backgroundColor = "";
-            h3_3.style.backgroundColor = "";
-        } else if (number === "2") {
-            h3_1.style.backgroundColor = "";
-            h3_3.style.backgroundColor = "";
-        } else {
-            h3_1.style.backgroundColor = "";
-            h3_2.style.backgroundColor = "";
-        }
-    }
+    if (listenersAttached) return;
 
     h3_1.addEventListener("mouseenter", () => highlight("1"));
     h3_1.addEventListener("mouseleave", () => unhighlight("1"));
@@ -50,40 +42,18 @@ function attachListeners() {
     h3_3.addEventListener("mouseenter", () => highlight("3"));
     h3_3.addEventListener("mouseleave", () => unhighlight("3"));
 
-    h3_1.addEventListener("mouseenter", () => {
-        h3_2.style.backgroundColor = "purple";
-        h3_3.style.backgroundColor = "purple";
-    });
-    h3_1.addEventListener("mouseleave", () => {
-        h3_2.style.backgroundColor = "";
-        h3_3.style.backgroundColor = "";
-    });
-    h3_2.addEventListener("mouseenter", () => {
-        h3_1.style.backgroundColor = "purple";
-        h3_3.style.backgroundColor = "purple";
-    });
-    h3_2.addEventListener("mouseleave", () => {
-        h3_1.style.backgroundColor = "";
-        h3_3.style.backgroundColor = "";
-    });
-    h3_3.addEventListener("mouseenter", () => {
-        h3_1.style.backgroundColor = "purple";
-        h3_2.style.backgroundColor = "purple";
-    });
-    h3_3.addEventListener("mouseleave", () => {
-        h3_1.style.backgroundColor = "";
-        h3_2.style.backgroundColor = "";
-    });
-
     listenersAttached = true;
 }
 
 function removeListeners() {
     if (!listenersAttached) return;
 
-    h3_1.replaceWith(h3_1.cloneNode(true));
-    h3_2.replaceWith(h3_2.cloneNode(true));
-    h3_3.replaceWith(h3_3.cloneNode(true));
+    // Clear JS-applied styles
+    [h3_1, h3_2, h3_3].forEach(el => {
+        el.style.backgroundColor = ""; // removes inline styles
+        const clone = el.cloneNode(true);
+        el.replaceWith(clone);
+    });
 
     // Reassign references after cloning
     h3_1 = document.getElementById("h3-1");
@@ -94,17 +64,12 @@ function removeListeners() {
 }
 
 function checkSize() {
-    if (window.innerWidth >= 600) {
-    attachListeners();
+    if (window.innerWidth >= 768) {
+        attachListeners();
     } else {
-    removeListeners();
+        removeListeners(); // ensures hover styles revert to CSS
     }
 }
 
 window.addEventListener("resize", checkSize);
-
-// Run on initial load
-checkSize();
-
-// Attach listeners on initial load
-attachListeners();
+window.addEventListener("load", checkSize);

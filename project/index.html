@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Family Website</title>
@@ -10,10 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
-    <link href="styles/project.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap">
     <link href="styles/header.css" rel="stylesheet">
+    <link href="styles/project.css" rel="stylesheet">
+    <link href="styles/cards.css" rel="stylesheet">
+    <link href="styles/keyframes.css" rel="stylesheet">
+    <link href="styles/project-sized.css" rel="stylesheet">
     <script src="scripts/project.js" defer></script>
     <script src="scripts/hover.js" defer></script>
+    <script src="scripts/news.js" defer></script>
+    <script src="scripts/home.js" defer></script>
 </head>
 <body>
     <header>
@@ -28,9 +33,9 @@
                 </svg>
             </div>
             <div id="stacked-menu">
-                <h3 id="h3-1">Parents</h3>
-                <h3 id="h3-2">Children</h3>
-                <h3 id="h3-3">Contact</h3>
+                <a href="children.html"><h3 id="h3-1">Children</h3></a>
+                <a href="parents.html"><h3 id="h3-2">Parents</h3></a>
+                <a href="contact.html"><h3 id="h3-3">Contact</h3></a>
             </div>
             <div id="up-svg">
                 <svg width="60" height="60" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -41,98 +46,86 @@
             </div>
         </nav>
     </header>
-
-
-
-<main>
-    <div id="main-expander"></div>
-
-    <div id="hero-image">
-        <div id="news">
-            <div id="news-label">Family News!</div>
-        </div>
-    
-    
-        <div id="news-container">
-            <!-- Visible News (with transparency) -->
-            <div id="right-news-floater">
-                <div class="news-item visible top-news">
-                    <div class="news-plate">
-                        <h4>August 10th:</h4>
-                        <p>We went to the beach!</p>
+    <main>
+        <div id="main-expander"></div>
+        <div id="hero-image">
+            <div id="news">
+                <div id="news-label">Family News!</div>
+            </div>
+        
+        
+            <div id="news-container">
+                <!-- Visible News (with transparency) -->
+                <div id="top-news-floater">
+                    <div class="news-item visible top-news">
+                        <div class="news-plate">
+                            <h4>August 10th:</h4>
+                            <p>We went to the beach!</p>
+                        </div>
                     </div>
-                </div>
-                <div class="news-item visible top-news">
-                    <div class="news-plate">
-                        <h4>July 26th to August 16th:</h4>
-                        <p>Grandfather is here to visit!</p>
+                    <div class="news-item visible top-news">
+                        <div class="news-plate">
+                            <h4>July 26th to August 16th:</h4>
+                            <p>Grandfather is here to visit!</p>
+                        </div>
                     </div>
-                </div>
-                <div class="news-item visible top-news">
-                    <div class="news-plate">
-                        <h4>July:</h4>
-                        <p>Time for summer...</p>
+                    <div class="news-item visible top-news">
+                        <div class="news-plate">
+                            <h4>July:</h.
+                                4>
+                            <p>Time for summer...</p>
+                        </div>
                     </div>
-                </div>
-                <div id="see-more">
-                    <h4>See more below ↴</h4>
+                    <button type="button" id="see-more">See more below ↴</button>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Cards Section (Responsive) -->
-    <div id="card-container">
-        <div class="card">
-            <div class="card-img-box">
-                <img src="images/children-small.jpg" alt="Children" height="190" width="110">
+        <!-- Cards Section (Responsive) -->
+        <div id="home-card-container">
+            <div class="home-card" id="card-top1">
+                <div class="card-img-box">
+                    <img src="images/children-small.jpg" alt="children" height="190" width="110">
+                </div>
+                <div class="card-word-box">
+                    <h3>Meet Our Children</h3>
+                    <p>Like most children,<br>they are high in energy.</p>
+                </div>
             </div>
-            <div class="card-word-box">
-                <h3>Meet Our Children</h3>
-                <p>Like most children,<br>they are high-energy.</p>
+            <div class="home-card" id="card-top2">
+                <div class="card-img-box">
+                    <img src="images/parents-small.jpg" alt="parents" height="160" width="200">
+                </div>
+                <div class="card-word-box">
+                    <h3>Meet Our Parents</h3>
+                    <p>They married purely<br>by accident.</p>
+                </div>
+            </div>
+            <div class="home-card" id="card-bottom">
+                <div class="card-img-box">
+                    <svg width="120" height="60" viewBox="0 0 120 60" fill="#F0F0F0" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0L60 40L120 0L0 0L0 60L120 60L120 0Z" stroke="black" stroke-width="3" fill="#FFFFFF"></path>
+                        <path d="M0 60L45 30M75 30L120 60Z" stroke="black" stroke-width="2" fill="FFFFFF"></path>
+                    </svg>
+                </div>
+                <div class="card-word-box">
+                    <h3>Send Us A Message</h3>
+                    <p>We'll answer when we<br>get a spare minute.</p>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-img-box">
-                <img src="images/parents-small.jpg" alt="Children" height="160" width="200">
-            </div>
-            <div class="card-word-box">
-                <h3>Meet Our Parents</h3>
-                <p>They met purely<br>by accident.</p>
-            </div>
+        <!-- Hidden News -->
+        <div id="bottom-news-holder">
+            <div class="news-item hidden bottom-news" id="first-hidden"><div class="news-plate"><h4>June</h4><p>Father was ill all month...</p></div></div>
+            <div class="news-item hidden bottom-news"><div class="news-plate"><h4>May</h4><p>A drought!</p></div></div>
+            <div class="news-item hidden bottom-news"><div class="news-plate"><h4>April</h4><p>We went to the flower hill.</p></div></div>
+            <div class="news-item hidden bottom-news"><div class="news-plate"><h4>March</h4><p>Still wintry...</p></div></div>
+            <div class="news-item hidden bottom-news"><div class="news-plate"><h4>February</h4><p>Grandpa and Grandma came!</p></div></div>
+            <div class="news-item hidden bottom-news"><div class="news-plate"><h4>January</h4><p>Father went to the hospital again!</p></div></div>
+            <div class="news-item hidden bottom-news"><div class="news-plate"><h4>2024 December</h4><p>Father: sick!</p></div></div>
+            <!-- <button id="go-back">Go back up ⬏</button> -->
+            <div id="button-container"></div>
         </div>
-        <div class="card">
-            <div class="card-img-box">
-                <svg width="120" height="60" viewBox="0 0 120 60" fill="#F0F0F0" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0L60 40L120 0L0 0L0 60L120 60L120 0Z" stroke="black" stroke-width="3" fill="#FFFFFF"></path>
-                    <path d="M0 60L45 30M75 30L120 60Z" stroke="black" stroke-width="2" fill="FFFFFF"></path>
-                </svg>
-            </div>
-            <div class="card-word-box">
-                <h3>Send Us A Message</h3>
-                <p>We'll answer when we<br>get a spare minute.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Hidden News -->
-    <div class="news-item hidden">Older News Item 3</div>
-    <div class="news-item hidden">Older News Item 4</div>
-    <div class="news-item hidden">Older News Item 5</div>
-    <div class="news-item hidden">Older News Item 6</div>
-    <div class="news-item hidden">Older News Item 7</div>
-    <div class="news-item hidden">Older News Item 8</div>
-    <div class="news-item hidden">Older News Item 9</div>
-
-
-</main>
-
-
-
-
-
-
-
-
+    </main>
     <footer>
         <p>
             &copy; <span id="currentyear"></span>

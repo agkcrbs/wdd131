@@ -42,6 +42,15 @@ nav svg {
     height: 165px;
 }
 
+#stacked-menu * {
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    align-self: center;
+}
+/* <a> tags are display: inline by default, and don't respect border-radius, background-color, or border. Try inline-block, block, or flex. */
+
 #h3-1, #h3-2, #h3-3 {
     height: 55px;
     background-color: #292929;
@@ -50,8 +59,14 @@ nav svg {
     border-radius: 5px;
 }
 
-#h3-1:hover, #h3-2:hover, #h3-3:hover {
-    background-color: purple; /* #494949; */
+/* #h3-1:hover, #h3-2:hover, #h3-3:hover {
+    background-color: purple; /* #494949;
+} */
+
+@media (max-width: 767px) {
+    #h3-1:hover, #h3-2:hover, #h3-3:hover {
+        background-color: purple;
+    }
 }
 
 #up-svg {
@@ -75,10 +90,6 @@ nav svg {
 }
 
 /* */
-
-/* main.show {
-    margin-top: 165px;
-} */
 
 #main-expander.show {
     margin-top: 170px;
@@ -135,12 +146,8 @@ nav svg {
         gap: 20px;
     }
 
-    #stacked-menu h3 {
-        width: 100%;
+    #stacked-menu * {
         border-radius: 30px;
     }
 
-    #h3-1:hover, #h3-2:hover, #h3-3:hover {
-        background-color: #000000;
-    }
 }

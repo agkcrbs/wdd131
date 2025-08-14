@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Family Website - Feedback Received</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Steven Foster - My Family Site">
+    <meta name="author" content="Steven Foster">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap">
+    <link href="styles/header.css" rel="stylesheet">
+    <link href="styles/project.css" rel="stylesheet">
+    <link href="styles/cards.css" rel="stylesheet">
+    <link href="styles/keyframes.css" rel="stylesheet">
+    <link href="styles/project-sized.css" rel="stylesheet">
+    <script src="scripts/project.js" defer></script>
+    <script src="scripts/hover.js" defer></script>
+    <script src="scripts/receipt.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Thank You</h1>
+        <nav>
+            <div id="down-svg">
+                <svg width="60" height="60" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="75" stroke="#FFFFFF" stroke-width="5" />
+                <polygon points="100,145 40,85 160,85" fill="white" />
+                </svg>
+            </div>
+            <div id="stacked-menu">
+                <a href="children.html"><h3 id="h3-1">Children</h3></a>
+                <a href="parents.html"><h3 id="h3-2">Parents</h3></a>
+                <a href="contact.html"><h3 id="h3-3">Contact</h3></a>
+            </div>
+            <div id="up-svg">
+                <svg width="60" height="60" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="75" stroke="#FFFFFF" stroke-width="5" />
+                <polygon points="100,65 40,125 160,125" fill="white" />
+                </svg>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="main-expander"></div>
+        <div id="received-message-holder">
+            <h2>Our family values your feedback!</h2>
+            <p>Leave as many comments as you would like.</p>
+            <p>Total messages from your browser: <span id="count">0</span></p>
+            <a href="index.html">Go back to the home page</a>
+        </div>
+    </main>
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Steven Foster <img src="images/flag-sm4.jpg" alt="Korean flag" height="15"> Republic of (South) Korea
+        </p>
+        <p id="footer-space"></p>
+        <p id="lastModified">This webpage was last modified on: </p>
+    </footer>
+</body>

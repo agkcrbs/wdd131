@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Family Website - Parents</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Steven Foster - My Family Site">
+    <meta name="author" content="Steven Foster">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap">
+    <link href="styles/header.css" rel="stylesheet">
+    <link href="styles/project.css" rel="stylesheet">
+    <link href="styles/cards.css" rel="stylesheet">
+    <link href="styles/keyframes.css" rel="stylesheet">
+    <link href="styles/project-sized.css" rel="stylesheet">
+    <script src="scripts/project.js" defer></script>
+    <script src="scripts/hover.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Our Parents</h1>
+        <nav>
+            <div id="down-svg">
+                <svg width="60" height="60" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="75" stroke="#FFFFFF" stroke-width="5" />
+                <polygon points="100,145 40,85 160,85" fill="white" />
+                </svg>
+            </div>
+            <div id="stacked-menu">
+                <a href="children.html"><h3 id="h3-1">Children</h3></a>
+                <a href="index.html"><h3 id="h3-2">Home</h3></a>
+                <a href="contact.html"><h3 id="h3-3">Contact</h3></a>
+            </div>
+            <div id="up-svg">
+                <svg width="60" height="60" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="75" stroke="#FFFFFF" stroke-width="5" />
+                <polygon points="100,65 40,125 160,125" fill="white" />
+                </svg>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="main-expander"></div>
+        <div id="parents-hero-image"></div>
+        <div id="parent-card-container">
+            <div class="parent-card" id="parent-card1">
+                <div class="parent-card-img-box">
+                    <h3>Father</h3>
+                    <img src="images/father-medium.jpg" alt="father" height="130" width="195">
+                </div>
+                <div class="parent-card-word-box">
+                    <p>I am an English-teacher<br>in South Korea.</p>
+                    <p>I have been a <a href="https://www.byupathway.edu/degrees/program-list#viewallcertificates/#list-certificates" target="_blank">BYU Pathway</a> student for a few years now.</p>
+                    <p>I enjoy taking photographs of my family, and I am always ready for a <a href="https://www.chess.com" target="_blank">chess</a> match.</p>
+                </div>
+            </div>
+            <div class="parent-card" id="parent-card2">
+                <div class="parent-card-img-box">
+                    <h3>Mother</h3>
+                    <img src="images/mother-medium.jpg" alt="mother" height="172" width="195">
+                </div>
+                <div class="parent-card-word-box">
+                    <p>Growing up in rural Korea taught me the value of diligence and collaboration.</p>
+                    <p>Now, I do my best to stay balanced as a mother, teacher, and student.</p>
+                    <p>Nice to meet you!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Steven Foster <img src="images/flag-sm4.jpg" alt="Korean flag" height="15"> Republic of (South) Korea
+        </p>
+        <p id="footer-space"></p>
+        <p id="lastModified">This webpage was last modified on: </p>
+    </footer>
+</body>

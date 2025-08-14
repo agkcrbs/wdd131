@@ -1,0 +1,46 @@
+/* Hovering effects */
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -1px) rotate(-1deg); }
+    20% { transform: translate(1px, 1px) rotate(1deg); }
+    30% { transform: translate(-1px, 1px) rotate(-1deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, -1px) rotate(-1deg); }
+    60% { transform: translate(1px, 1px) rotate(0deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes bump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        /* Randomly choose direction */
+        transform: translate(calc(var(--random-x, 0px)), calc(var(--random-y, 0px)));
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes scootAndBounce {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(1px); /* Move right */
+    }
+    35% {
+        transform: translateX(2px); 
+    }
+    50% {
+        transform: translateX(10px); /* Overshoot slightly */
+    }
+    75% {
+        transform: translateX(1px); /* Bounce back */
+    }
+    100% {
+        transform: translateX(0); /* Return to start */
+    }
+}

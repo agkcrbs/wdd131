@@ -5,11 +5,28 @@
 * {
     margin: 0;
     padding: 0;
+
+    /* .non-selectable { */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none; /* Important for touch devices */
+    -khtml-user-select: none; /* Older versions of WebKit */
+    -o-user-select: none;
 }
 
 body {
     font-family: "Outfit", Trebuchet, sans-serif;
     min-width: 410px;
+}
+
+p, h1, h2, h3, h4, div {
+    cursor: default;
+}
+
+a:visited {
+  text-decoration: none;
 }
 
 /* */
@@ -19,6 +36,27 @@ body {
     background-size: cover;
     background-position: center;
     height: 450px;
+}
+
+#children-hero-image {
+    background-image: url("../images/children-bg-medium.jpg");
+    background-size: cover;
+    background-position: bottom;
+    height: 350px;
+}
+
+#parents-hero-image {
+    background-image: url("../images/parents-bg-medium.jpg");
+    background-size: cover;
+    background-position: top;
+    height: 300px;
+}
+
+#contact-hero-image {
+    background-image: url("../images/contact-bg-medium.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
 }
 
 #news {
@@ -41,31 +79,34 @@ body {
 
 #news-container {
     width: 70%;
-    margin: 20px 0;
     justify-self: right;
     position: relative;
     bottom: 260px;
-    overflow: hidden; /* relative position keeps its empty space there without this */
+    overflow: hidden; /* relative position keeps its original space empty without this */
 }
 
-#right-news-floater {
+#top-news-floater {
     float: right;
     margin-right: 5%;
 }
+
 .news-item {
     background-color: rgba(240, 240, 240, 0.5);
     margin: 10px 0;
     padding: 15px;
     border-radius: 5px;
-    max-width: 400px;
-    justify-self: left;
     min-width: max-content;
+}
+
+.top-news {
+    justify-self: left;
+    max-width: 400px;
 }
 
 .news-plate {
     background-color: rgba(240, 240, 240, 0.7);
     padding: 10px;
-    font-size: 15px;
+    font-size: large;
     border-radius: 5px;
 }
 
@@ -73,49 +114,52 @@ body {
     text-indent: 30px;
 }
 
-#see-more {
+#see-more, #even-more, #go-back {
+    font-family: "Outfit", Trebuchet, sans-serif;
     background-color: rgba(240, 240, 240, 1);
     padding: 5px 10px;
+    font-size: medium;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#see-more {
     max-width: max-content;
     margin: 0 20% 0 15%;
 }
 
-/* */
-
-#card-container {
+.button-container {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    border: 1px solid black;
+    justify-content: space-evenly;
+    height: 50px;
 }
 
-.card {
-    text-align: center;
-    border: 1px solid black;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    padding: 10px;
-}
-
-.card-img-box {
-    width: 50%;
-    margin-right: 30px;
-}
-
-.card-word-box {
-    width: 50%;
-}
-
-.card-word-box>h3 {
+.button-container>* {
+    justify-content: space-evenly;
     margin-bottom: 10px;
 }
 
+main {
+    background-color: silver;
+}
+
+#bottom-news-holder {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.bottom-news {
+    width: 80%;
+    background-color: #82b9dd;
+    border: 1px dashed black;
+    justify-self: center;
+}
+
 /* */
+
+.visible {
+    display: block;
+}
 
 .hidden {
     display: none;
@@ -128,26 +172,85 @@ footer {
     width: 100%;
     bottom: 0;
     background-color: var(--bg);
+    color: white;
     text-align: center;
     align-content: center;
     height: 75px;
+}
+
+#currentyear {
+    background-color: black;
 }
 
 #footer-space {
     height: 5px;
 }
 
-/* body, main, footer, nav, nav p {
-    border: 1px solid red;
-} */
+/* */
 
-main {
-    background-color: silver;
+#contact-form {
+    text-align: center;
+    display: grid;
+    grid-template: 70px 1fr 70px / 1fr 1fr;
 }
 
-@media only screen and (min-width: 768px) { /* 'only' is a legacy feature; 'screen' is also understood and omissible */
-
+#contact-heading {
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+    margin: 15px 0;
 }
 
+#contact-labels {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-self: center;
+    gap: 15px;
+    text-align: right;
+}
 
+#contact-fields {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-self: left;
+    gap: 8px;
+}
 
+#contact-name {
+    height: 16px;
+    padding: 3px;
+}
+
+#contact-email {
+    height: 16px;
+    padding: 3px;
+}
+
+#contact-message {
+    padding: 3px;
+}
+
+#contact-submit-holder {
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+    margin: 15px 0;
+}
+
+#contact-submit-button {
+    padding: 10px;
+    font-size: medium;
+}
+
+#received-message-holder {
+    padding: 10px 0 20px 0;
+    text-align: center;
+}
+
+#received-message-holder>* {
+    margin: 10px 0;
+}
