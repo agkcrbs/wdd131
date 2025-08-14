@@ -1,12 +1,12 @@
 header {
     background-color: white;
-    color: white;
     text-align: center;
     margin: 5px;
 }
 
 h1 {
     background-color: var(--bg);
+    color: white;
     align-content: center;
     height: 75px;
     border-radius: 5px;
